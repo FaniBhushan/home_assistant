@@ -1,6 +1,6 @@
 # Home Assistant
 
-A personal home assistant project designed to monitor weather and indoor environment quality. This system integrates voice commands and dashboard widgets to provide real-time information about the home and the outdoors.
+An event drivenpersonal home assistant project designed to monitor weather and indoor environment quality. This system integrates voice commands and dashboard widgets to provide real-time information about the home and the outdoors.
 
 ## Features
 
@@ -16,3 +16,6 @@ A personal home assistant project designed to monitor weather and indoor environ
 ## Documentation
 
 - [Features and Requirements](docs/requirements.md)
+- [Project Roadmap](docs/ROADMAP.md)
+- [Todo List](docs/TODO.md)
+- [Changelog](CHANGELOG.md)

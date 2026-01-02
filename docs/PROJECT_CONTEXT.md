@@ -1,4 +1,4 @@
-# Project Context – Home AI Assistant
+# Project Context – Edge AI based Home AI Assistant
 
 ## Goal
 Build a local, AI-based home voice assistant with:
