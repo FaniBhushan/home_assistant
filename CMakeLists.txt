@@ -9,5 +9,14 @@ include_directories(patches)
 
 find_package(Boost 1.74 CONFIG REQUIRED COMPONENTS log)
 
-add_executable(home_assistant src/main.cpp)
+add_executable(home_assistant
+  src/main.cpp
+  src/config/ConfigLoader.cpp
+  src/sensor/SensorService.cpp
+  src/state/StateRegistry.cpp
+  src/service/HAService.cpp
+)
+
+target_include_directories(home_assistant PRIVATE src)
+
 target_link_libraries(home_assistant PRIVATE Boost::log)

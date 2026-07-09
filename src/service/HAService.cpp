@@ -39,4 +39,6 @@ void HAService::post(std::function<void()> task) {
   boost::asio::post(m_ioContext, std::move(task));
 }
 
+boost::asio::io_context& HAService::ioContext() { return m_ioContext; }
+
 } // namespace service

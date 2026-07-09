@@ -23,6 +23,8 @@ public:
    */
   void post(std::function<void()> task);
 
+  boost::asio::io_context& ioContext();
+
 private:
   boost::asio::io_context m_ioContext;
   using WorkGuard =
