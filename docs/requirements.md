@@ -11,6 +11,7 @@
 <!-- List the functional requirements here -->
 - The system should be able to respond to the prompts like "What is the weather like today?" and "What is the temperature like today?"
 - The system should be able to respond to the prompts like "What is the temperature of the master bedroom right now?" and "What is the CO2 level of the master bedroom right now?"
-
+- system shall store and display the household chore schedule. It shall also be queried via speech
+- above point shall also be possible for Todo.
 ## Non-Functional Requirements
 <!-- List the non-functional requirements here -->

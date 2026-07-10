@@ -2,7 +2,11 @@
 #define HA_SERVICE_HPP
 
 #include <boost/asio.hpp>
+
+#include <atomic>
+#include <cstddef>
 #include <functional>
+#include <mutex>
 #include <thread>
 #include <vector>
 
@@ -26,11 +30,17 @@ public:
   boost::asio::io_context& ioContext();
 
 private:
+  void maybeGrowWorkersLocked();
+
   boost::asio::io_context m_ioContext;
   using WorkGuard =
       boost::asio::executor_work_guard<boost::asio::io_context::executor_type>;
   WorkGuard m_workGuard;
+  std::mutex m_threadMutex;
   std::vector<std::thread> m_threads;
+  std::atomic<std::size_t> m_pendingPostedTasks{0};
+  unsigned int m_maxWorkerThreads;
+  bool m_started{false};
 };
 
 } // namespace service
